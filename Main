@@ -12,46 +12,46 @@ public class Main {
     public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         HashMap<Integer, String> rudyTekst = new HashMap<>();
 
-        rudyTekst.put(1,"Ej");
-        rudyTekst.put(2,"Ej bo");
-        rudyTekst.put(3,"Słuchajcie chłopaki");
-        rudyTekst.put(4,"Słuchajcie");
-        rudyTekst.put(5,"W ogóle to dzisiaj");
-        rudyTekst.put(6,"A w ogóle");
-        rudyTekst.put(7,"Ej słyszeliście");
+        rudyTekst.put(1, "Ej");
+        rudyTekst.put(2, "Ej bo");
+        rudyTekst.put(3, "Słuchajcie chłopaki");
+        rudyTekst.put(4, "Słuchajcie");
+        rudyTekst.put(5, "W ogóle to dzisiaj");
+        rudyTekst.put(6, "A w ogóle");
+        rudyTekst.put(7, "Ej słyszeliście");
 
-        rudyTekst.put(8," byłem w manu co nie");
-        rudyTekst.put(9," byłem w tym co nie");
-        rudyTekst.put(10," byłem yyyy wiecie co nie");
-        rudyTekst.put(11," spotkałem yyyy tego co nie");
-        rudyTekst.put(12," wchodzi ojciec co nie");
-        rudyTekst.put(13," wchodzę do pokoju co nie");
-        rudyTekst.put(14," wchodzi brat co nie");
-        rudyTekst.put(15," gadałem z Łucją co nie");
-        rudyTekst.put(16," wracałem sobie");
-        rudyTekst.put(17," karmiłem kury");
-        rudyTekst.put(18," wpadłem na taki pomysł");
-        rudyTekst.put(19," tak sobie pomyślałem");
+        rudyTekst.put(8, " byłem w manu co nie");
+        rudyTekst.put(9, " byłem w tym co nie");
+        rudyTekst.put(10, " byłem yyyy wiecie co nie");
+        rudyTekst.put(11, " spotkałem yyyy tego co nie");
+        rudyTekst.put(12, " wchodzi ojciec co nie");
+        rudyTekst.put(13, " wchodzę do pokoju co nie");
+        rudyTekst.put(14, " wchodzi brat co nie");
+        rudyTekst.put(15, " gadałem z Łucją co nie");
+        rudyTekst.put(16, " wracałem sobie");
+        rudyTekst.put(17, " karmiłem kury");
+        rudyTekst.put(18, " wpadłem na taki pomysł");
+        rudyTekst.put(19, " tak sobie pomyślałem");
 
-        rudyTekst.put(20," i ja wtedy");
-        rudyTekst.put(21," i ja miałem takie");
-        rudyTekst.put(22,", jak to się mówi");
-        rudyTekst.put(23,", kurde");
-        rudyTekst.put(24,", w sumie");
-        rudyTekst.put(25,", w sensie");
-        rudyTekst.put(26,", tego");
-        rudyTekst.put(27,", no bo wiesz");
-        rudyTekst.put(28,", po prostu tego");
+        rudyTekst.put(20, " i ja wtedy");
+        rudyTekst.put(21, " i ja miałem takie");
+        rudyTekst.put(22, ", jak to się mówi");
+        rudyTekst.put(23, ", kurde");
+        rudyTekst.put(24, ", w sumie");
+        rudyTekst.put(25, ", w sensie");
+        rudyTekst.put(26, ", tego");
+        rudyTekst.put(27, ", no bo wiesz");
+        rudyTekst.put(28, ", po prostu tego");
 
-        rudyTekst.put(29," ...dobra nieważne.");
-        rudyTekst.put(30,", no i tak o.");
-        rudyTekst.put(31,", no.");
-        rudyTekst.put(32,", ej mArcin");
-        rudyTekst.put(33,", czekajcie bo ojciec...");
-        rudyTekst.put(34,", czekajcie bo brat...");
-        rudyTekst.put(35,", czekajcie bo kot...");
-        rudyTekst.put(36,", czekajcie bo bąbel...");
-        rudyTekst.put(37,", e jebać...");
+        rudyTekst.put(29, " ...dobra nieważne.");
+        rudyTekst.put(30, ", no i tak o.");
+        rudyTekst.put(31, ", no.");
+        rudyTekst.put(32, ", ej mArcin");
+        rudyTekst.put(33, ", czekajcie bo ojciec...");
+        rudyTekst.put(34, ", czekajcie bo brat...");
+        rudyTekst.put(35, ", czekajcie bo kot...");
+        rudyTekst.put(36, ", czekajcie bo bąbel...");
+        rudyTekst.put(37, ", e jebać...");
 
         Random random = new Random();
 
@@ -65,13 +65,13 @@ public class Main {
         textPane.setVisible(true);
 
         JTextField textField = new JTextField();
-        textField.setBounds(10,375,765,100);
+        textField.setBounds(10, 375, 765, 100);
         textField.setVisible(true);
         textField.setFont(new Font("Arial", Font.BOLD, 15));
 
         panel.add(textField);
 
-        button.setBounds(250,100,300,200);
+        button.setBounds(250, 100, 300, 200);
         button.setText("Generate a RUDY prompt");
         button.setFocusable(false);
         button.setFont(new Font("Arial", Font.BOLD, 20));
@@ -79,7 +79,7 @@ public class Main {
         chatRUD.setTitle("ChatRUD");
         chatRUD.setLayout(null);
         chatRUD.setVisible(true);
-        chatRUD.setSize(800,600);
+        chatRUD.setSize(800, 600);
         chatRUD.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         chatRUD.getContentPane().setBackground(new java.awt.Color(127, 44, 9));
         chatRUD.add(button);
@@ -87,13 +87,26 @@ public class Main {
         chatRUD.add(textPane);
         chatRUD.add(textField);
 
-        File file = new File("C:\\Program Files\\dZawa\\ChatRUD\\chatrud.wav");
-        AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
-        Clip clip = AudioSystem.getClip();
-        clip.open(audioStream);
-        clip.start();
-        clip.loop(clip.LOOP_CONTINUOUSLY);
+        playAudio();
 
-        button.addActionListener(e -> textField.setText(rudyTekst.get(random.nextInt(7)+1)+rudyTekst.get(random.nextInt(8,19)+1)+rudyTekst.get(random.nextInt(20,28)+1)+rudyTekst.get(random.nextInt(8,19)+1)+rudyTekst.get(random.nextInt(29,37)+1)));
+        button.addActionListener(e -> textField.setText(rudyTekst.get(random.nextInt(7) + 1) + rudyTekst.get(random.nextInt(8, 19) + 1) + rudyTekst.get(random.nextInt(20, 28) + 1) + rudyTekst.get(random.nextInt(8, 19) + 1) + rudyTekst.get(random.nextInt(29, 37) + 1)));
+
+    }
+
+    public static void playAudio() {
+        try {
+            File file = new File("C:\\Program Files\\dZawa\\ChatRUD\\chatrud.wav");
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioStream);
+            clip.start();
+            clip.loop(clip.LOOP_CONTINUOUSLY);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (UnsupportedAudioFileException e) {
+            throw new RuntimeException(e);
+        } catch (LineUnavailableException e) {
+            throw new RuntimeException(e);
         }
     }
+}
